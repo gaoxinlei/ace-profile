@@ -1,8 +1,6 @@
-
-
-# cp $(locate git-prompt.sh | head -1) ~/.git-prompt.sh
-# or
-# wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
+if [ ! -f ~/.git-prompt.sh ];then
+    wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
+fi
 source ~/.git-prompt.sh
 
 # About the below environment usage, please refer to ~/.git-prompt.sh
