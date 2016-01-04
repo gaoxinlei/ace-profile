@@ -13,5 +13,5 @@ done
 
 vimrc=$HOME/.vimrc
 ideavimrc=$HOME/.ideavimrc
-[ -f ] || ln -s $VimrcWithoutPlugin/_vimrc $vimrc
-[ -f ] || ln -s $VimrcWithoutPlugin/_vimrc $ideavimrc
+[ -f $vimrc ] || ln -s $VimrcWithoutPlugin/_vimrc $vimrc
+[ -f $ideavimrc ] || ln -s $VimrcWithoutPlugin/_vimrc $ideavimrc
