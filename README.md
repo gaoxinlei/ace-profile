@@ -7,3 +7,4 @@ Follow these steps:
     git clone https://github.com/acefei/MyLinuxProfile.git
     cd MyLinuxProfile
     ./set_environment.sh
+    
