@@ -1,4 +1,4 @@
-path=$(dirname $0)
+path=$(cd $(dirname $0); pwd)
 BashProfile=$path/BashProfile
 VimrcWithoutPlugin=$path/VimrcWithoutPlugin
 bashrc=$HOME/.bashrc
