@@ -1,0 +1,4 @@
+if [ ! -f ~/.git-completion.bash ]; then
+  wget https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
+fi
+source ~/.git-completion.bash
