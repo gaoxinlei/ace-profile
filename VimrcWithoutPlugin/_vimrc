@@ -286,8 +286,12 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 " Quickly open a buffer for scripbble
 map <leader>q :e ~/buffer<cr>
 
-" Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
+"<F3> - trim trail whitespace
+map <F3> :silent! g/^[ \n]\+$/d<cr>
+
+"<F4> - Open/Close Insert Paste
+set pastetoggle=<F4>
+
 
 " Automatically chmod +x Shell and script
 au BufWritePost *.sh !chmod +x %
