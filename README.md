@@ -5,6 +5,6 @@ Follow these steps:
 
     cd
     git clone https://github.com/acefei/MyLinuxProfile.git
-    cd MyLinuxProfile
-    ./set_environment.sh
+    ./MyLinuxProfile/set_environment.sh
+    
     
