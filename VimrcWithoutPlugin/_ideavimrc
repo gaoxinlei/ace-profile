@@ -26,9 +26,6 @@ set noswapfile
 set ignorecase
 set showmatch
 
-map j gjzz
-map k gkzz
-
 noremap j gjzz
 noremap k gkzz
 
