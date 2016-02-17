@@ -148,8 +148,21 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 " => Moving around
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Treat long lines as break lines (useful when moving around in them)
-map j gjzz
-map k gkzz
+noremap j gjzz
+noremap k gkzz
+
+noremap n nzz
+noremap <s-n> <s-n>zz
+
+noremap * *zz
+noremap # #zz
+
+noremap <c-o> <c-o>zz
+noremap <c-i> <c-i>zz
+noremap <s-j> <c-d><s-m>
+noremap <s-k> <c-u><s-m>
+noremap <s-h> b
+noremap <s-l> e
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
@@ -221,8 +234,14 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap VIM 0 to first non-blank character
-" map 0 ^
+noremap ^ 0
+noremap 0 ^
 
+noremap - $
+vnoremap - $h
+
+set clipboard+=unnamed
+ 
 " Delete trailing white space on save, useful for Python
 func! DeleteTrailingWS()
   exe "normal mz"
