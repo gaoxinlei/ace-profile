@@ -4,26 +4,56 @@ set nocp
 filetype indent on
 au BufEnter,BufRead *.py setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 au BufEnter,BufRead *.pl setlocal smartindent
+
 set tabstop=8
 set expandtab
 set softtabstop=4
 set shiftwidth=4
-"set textwidth=79
+
 set nu
 set hlsearch
+nnoremap <esc> :noh<cr>zz
+
 set showmode
 "<F3> - trim trail whitespace
 map <F3> :silent! g/^[ \n]\+$/d<cr>
+
 "<F4> - Open/Close Insert Paste
 set pastetoggle=<F4>
+
 set nobackup
 set noswapfile
 set ignorecase
 set showmatch
-set scrolloff=3
+
+map j gjzz
+map k gkzz
+
+noremap j gjzz
+noremap k gkzz
+
+noremap ^ 0
+noremap 0 ^
+noremap - $
+vnoremap - $h
+
+noremap n nzz
+noremap <s-n> <s-n>zz
+
+noremap * *zz
+noremap # #zz
+
+noremap <c-o> <c-o>zz
+noremap <c-i> <c-i>zz
+noremap <s-j> <c-d><s-m>
+noremap <s-k> <c-u><s-m>
+noremap <s-h> b
+noremap <s-l> e
+
+set clipboard+=unnamed
+
 " Automatically chmod +x Shell and script
 au BufWritePost *.sh !chmod +x %
 au BufWritePost *.pl !chmod +x %
 au BufWritePost *.py !chmod +x %
 
-nmap 0 ^
