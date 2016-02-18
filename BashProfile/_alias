@@ -14,6 +14,9 @@ alias j='jobs -l'
 alias which='type -a'
 alias ..='cd ..'
 
+# yum install meld, aim to git difftool via meld
+alias gdiff='env PATH=/usr/bin git difftool'
+
 # Pretty-print of some PATH variables:
 alias path='echo -e ${PATH//:/\\n}'
 alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
