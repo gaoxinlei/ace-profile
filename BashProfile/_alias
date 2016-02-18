@@ -21,7 +21,6 @@ alias gdiff='env PATH=/usr/bin git difftool'
 alias path='echo -e ${PATH//:/\\n}'
 alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 
-
 alias du='du -kh'    # Makes a more readable output.
 alias df='df -kTh'
 
