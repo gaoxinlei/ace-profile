@@ -159,10 +159,6 @@ noremap # #zz
 
 noremap <c-o> <c-o>zz
 noremap <c-i> <c-i>zz
-noremap <s-j> <c-d><s-m>
-noremap <s-k> <c-u><s-m>
-noremap <s-h> b
-noremap <s-l> e
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
