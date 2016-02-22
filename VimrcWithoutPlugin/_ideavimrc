@@ -42,10 +42,7 @@ noremap # #zz
 
 noremap <c-o> <c-o>zz
 noremap <c-i> <c-i>zz
-noremap <s-j> <c-d><s-m>
-noremap <s-k> <c-u><s-m>
-noremap <s-h> b
-noremap <s-l> e
+
 
 set clipboard+=unnamed
 
