@@ -1,5 +1,8 @@
 if [ ! -f ~/.git-prompt.sh ];then
-    wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
+    #wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
+    touch ~/.git-prompt.sh
+    echo "please perform the following command, and login again:"
+    echo "wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh"
 fi
 source ~/.git-prompt.sh
 
