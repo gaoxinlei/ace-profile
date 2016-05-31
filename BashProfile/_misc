@@ -1,1 +1,2 @@
 set -o vi
+alias pyc='pycharm.sh > /dev/null 2>&1 &'
