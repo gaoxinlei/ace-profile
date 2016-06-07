@@ -10,6 +10,7 @@ alias vi='vim'
 alias j='jobs -l'
 alias which='type -a'
 alias ..='cd ..'
+alias c='clear'
 
 # yum install meld, aim to git difftool via meld
 alias gdiff='env PATH=/usr/bin git difftool'
