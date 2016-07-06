@@ -4,7 +4,7 @@ Sample .bashrc and .bash_profile Files: http://tldp.org/LDP/abs/html/sample-bash
 Follow these steps:
 
     cd
-    git clone https://github.com/acefei/MyLinuxProfile.git
-    ./MyLinuxProfile/set_environment.sh
+    git clone https://github.com/acefei/AceProfile.git
+    ./AceProfile/set_environment.sh
     
     
