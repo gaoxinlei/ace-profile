@@ -1,10 +1,9 @@
-if [ ! -f ~/.git-prompt.sh ];then
-    #wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
-    touch ~/.git-prompt.sh
-    echo "please perform the following command, and login again:"
-    echo "wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh"
+git_extension=~/.git-prompt.sh
+if [ ! -f $git_extension ];then
+    touch $git_extension
+    echo "please download https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh, and copy it to $git_extension"
 fi
-source ~/.git-prompt.sh
+source $git_extension
 
 # About the below environment usage, please refer to ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
