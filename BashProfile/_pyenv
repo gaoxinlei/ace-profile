@@ -1,0 +1,16 @@
+# sudo pip install virtualenv virtualenvwrapper
+
+# To tell pip to only run if there is a virtualenv currently activated
+alias vpip='env PIP_REQUIRE_VIRTUALENV=true pip '
+
+#Not having access to global site-packages is now the default behavior.
+alias mkv='mkvirtualenv --no-site-packages '
+alias lsv='lsvirtualenv '
+alias rmv='rmvirtualenv '
+
+# setup virutalenv 
+export WORKON_HOME=~/python_projects
+if [ ! -d $WORKON_HOME ];then
+    mkdir $WORKON_HOME
+    source `which virtualenvwrapper.sh`
+fi
