@@ -13,4 +13,4 @@
 wget http://downloads.sourceforge.net/wxpython/wxPython-src-2.8.12.1.tar.bz2
 tar -xjvf wxPython-src-2.8.12.1.tar.bz2
 cd wxPython-src-2.8.12.1/wxPython
-python setup.py install
+python build-wxpython.py --build_dir=../bld --install
