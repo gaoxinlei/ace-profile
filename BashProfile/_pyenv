@@ -13,8 +13,10 @@ alias quitv='deactivate '
 export WORKON_HOME=~/python_projects
 if [ ! -d $WORKON_HOME ];then
     mkdir $WORKON_HOME
-    source `which virtualenvwrapper.sh`
 fi
+
+vw=`which virtualenvwrapper.sh`
+[ -n "$vw" ] && source $vw
 
 wo()
 {
