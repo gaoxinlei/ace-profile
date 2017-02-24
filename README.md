@@ -5,6 +5,6 @@ Follow these steps:
 
     mkdir -p ~/workspace
     cd !$ && git clone https://github.com/acefei/AceProfile.git 
-    ./AceProfile/set_environment.sh
+    ./AceProfile/Installer/set_environment.sh
     
     

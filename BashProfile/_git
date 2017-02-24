@@ -1,6 +1,4 @@
-git_extension=~/.git-completion.bash
-if [ ! -f $git_extension ];then
-    touch $git_extension
-    echo "please download https://raw.github.com/git/git/master/contrib/completion/git-completion.bash, and copy it to $git_extension"
-fi
-source $git_extension
+for rc in ~/.git-*
+do
+    source $rc
+done

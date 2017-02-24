@@ -1,10 +1,3 @@
-git_extension=~/.git-prompt.sh
-if [ ! -f $git_extension ];then
-    touch $git_extension
-    echo "please download https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh, and copy it to $git_extension"
-fi
-source $git_extension
-
 # About the below environment usage, please refer to ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUPSTREAM=true
