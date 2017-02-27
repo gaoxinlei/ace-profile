@@ -26,8 +26,17 @@ init()
 
 }
 
+setup_development_tools()
+{
+    echo
+    echo ">>>>>  Setup development tools..."
+    sudo yum -y groupinstall "Development tools"
+    sudo yum install -y python-devel
+}
+
 setup_git_extension()
 {
+    echo
     echo ">>>>>  Setup git-completion..."
     $download ~/.git-completion.bash         https://raw.github.com/git/git/master/contrib/completion/git-completion.bash 
     echo
@@ -86,6 +95,7 @@ setup_pip()
 
 
 init
+setup_development_tools
 setup_git_extension
 setup_bash_profile
 setup_vim
