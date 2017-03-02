@@ -101,10 +101,10 @@ setup_pip()
 
 
 init
-#setup_development_tools
-#setup_git_extension
-#setup_bash_profile
+setup_development_tools
+setup_git_extension
+setup_bash_profile
 setup_vimrc
-#setup_pip
+setup_pip
 echo
 echo "*************** Installation complete, please source ~/.bash_profile to enable the profile ***************"
