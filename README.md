@@ -1,10 +1,7 @@
-Sample .bashrc and .bash_profile Files: http://tldp.org/LDP/abs/html/sample-bashrc.html
+## Installation:
+    Just One Step: 
 
-##Installation:
-Follow these steps:
-
-    mkdir -p ~/workspace
-    cd !$ && git clone https://github.com/acefei/AceProfile.git 
-    ./AceProfile/Installer/set_environment.sh
-    
-    
+## Reference
+> [.bashrc and .bash_profile](http://tldp.org/LDP/abs/html/sample-bashrc.html)
+> [.vimrc](https://github.comfisadev/fisa-vim-config/blob/master/.vimrc)
+> [vim-plug](https://github.com/junegunn/vim-plug)

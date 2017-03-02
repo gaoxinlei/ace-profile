@@ -1,10 +1,13 @@
+#!/bin/sh
 init()
 {
     path=$(cd $(dirname $0); pwd)
     BashProfile=$path/../BashProfile
-    VimrcWithoutPlugin=$path/VimrcWithoutPlugin
+    Vimrcs=$path/../Vimrcs
     bashrc=$HOME/.bashrc
     profile=$HOME/.bash_profile
+    vimrc=$HOME/.vimrc
+    ideavimrc=$HOME/.ideavimrc
 
     download=''
     if which wget >/dev/null 2>&1; then
@@ -23,6 +26,7 @@ init()
     fi
 
     yum_y='sudo yum install -y '
+    pip='sudo pip install '
 
 }
 
@@ -31,7 +35,7 @@ setup_development_tools()
     echo
     echo ">>>>>  Setup development tools..."
     sudo yum -y groupinstall "Development tools"
-    sudo yum install -y python-devel
+    $yum_y python-devel
 }
 
 setup_git_extension()
@@ -71,18 +75,20 @@ setup_bash_profile()
     ln -sf $profile $bashrc
 }
 
-setup_vim()
+setup_vimrc()
 {
     echo
     echo ">>>>>  Setup vim resource..."
     if ! which vim >/dev/null 2>&1; then
         $yum_y vim
     fi
-
-    vimrc=$HOME/.vimrc
-    ideavimrc=$HOME/.ideavimrc
-    [ -f $vimrc ] || ln -s $VimrcWithoutPlugin/_vimrc $vimrc
-    [ -f $ideavimrc ] || ln -s $VimrcWithoutPlugin/_ideavimrc $ideavimrc
+    [ -e $vimrc -o -h $vimrc ] && mv $vimrc ${vimrc}.backup
+    [ -e $ideavimrc -o -h $ideavimrc ] && mv $ideavimrc ${ideavimrc}.backup
+    ln -s $Vimrcs/_vimrc $vimrc
+    ln -s $Vimrcs/_ideavimrc $ideavimrc
+    $yum_y pylint exuberant-ctags build-essential cmake python-dev
+    $pip jedi
+    vim +PlugClean! +PlugInstall! +qa
 }
 
 setup_pip()
@@ -90,15 +96,15 @@ setup_pip()
     echo
     echo ">>>>>  Setup python-pip..."
     $yum_y python-pip
-    sudo pip install --upgrade pip
+    $pip --upgrade pip
 }
 
 
 init
-setup_development_tools
-setup_git_extension
-setup_bash_profile
-setup_vim
-setup_pip
+#setup_development_tools
+#setup_git_extension
+#setup_bash_profile
+setup_vimrc
+#setup_pip
 echo
 echo "*************** Installation complete, please source ~/.bash_profile to enable the profile ***************"
