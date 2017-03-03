@@ -35,7 +35,8 @@ setup_development_tools()
     echo
     echo ">>>>>  Setup development tools..."
     sudo yum -y groupinstall "Development tools"
-    $yum_y python-devel
+    $yum_y python-devel python-pip
+    $pip --upgrade pip
 }
 
 setup_git_extension()
@@ -91,20 +92,12 @@ setup_vimrc()
     vim +PlugClean! +PlugInstall! +qa
 }
 
-setup_pip()
-{
-    echo
-    echo ">>>>>  Setup python-pip..."
-    $yum_y python-pip
-    $pip --upgrade pip
-}
-
-
+##################### MAIN ##########################
 init
-setup_development_tools
-setup_git_extension
-setup_bash_profile
+#setup_development_tools
+#setup_git_extension
+#setup_bash_profile
 setup_vimrc
-setup_pip
-echo
+echo "**********************************************************************************************************"
 echo "*************** Installation complete, please source ~/.bash_profile to enable the profile ***************"
+echo "**********************************************************************************************************"
