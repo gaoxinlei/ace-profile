@@ -22,8 +22,11 @@
         "Plug 'klen/python-mode'
          
         " Autocompletion library
-        " Note that the python-mode VIM plugin seems to conflict with
-        " jedi-vim, therefore you should disable it before enabling jedi-vim.
+        " Note:
+        " 1. the python-mode VIM plugin seems to conflict with jedi-vim, 
+        "    therefore you should disable it before enabling jedi-vim.
+        " 2. Due to jedi need to search the python library, 
+        "    so it maybe popup nothing when you import some module for first time.
         Plug 'davidhalter/jedi-vim'
          
         " Code and files fuzzy finder
