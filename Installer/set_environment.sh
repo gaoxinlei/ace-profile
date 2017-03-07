@@ -26,7 +26,8 @@ init()
     fi
 
     yum_y='sudo yum install -y '
-    pip='sudo pip install '
+    pip_local=`which pip`
+    pip="sudo $pip_local install "
 
 }
 
@@ -94,9 +95,9 @@ setup_vimrc()
 
 ##################### MAIN ##########################
 init
-#setup_development_tools
-#setup_git_extension
-#setup_bash_profile
+setup_development_tools
+setup_git_extension
+setup_bash_profile
 setup_vimrc
 echo "**********************************************************************************************************"
 echo "*************** Installation complete, please source ~/.bash_profile to enable the profile ***************"
