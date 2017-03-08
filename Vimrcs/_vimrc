@@ -39,7 +39,12 @@
         Plug 'scrooloose/nerdcommenter'
 
         " Class/module browser
-         Plug 'majutsushi/tagbar'
+        Plug 'majutsushi/tagbar'
+
+        "  Code snippet
+        Plug 'SirVer/ultisnips'
+        " Snippets are separated from the engine. Add this if you want them:
+        Plug 'honza/vim-snippets'
 
     call plug#end()
 
