@@ -45,7 +45,10 @@
         Plug 'SirVer/ultisnips'
         " Snippets are separated from the engine. Add this if you want them:
         Plug 'honza/vim-snippets'
-
+        
+        " Insert or delete brackets, parens, quotes in pair.
+        Plug 'jiangmiao/auto-pairs'
+        
     call plug#end()
 
     " Install plugins the first time vim runs
