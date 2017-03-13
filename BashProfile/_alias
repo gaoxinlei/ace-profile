@@ -10,7 +10,6 @@ alias vi='vim'
 alias j='jobs -l'
 alias ..='cd ..'
 alias c='clear'
-alias sudo='sudo -E'
 alias uv='vim +PlugInstall +qa'
 
 # yum install meld, aim to git difftool via meld
