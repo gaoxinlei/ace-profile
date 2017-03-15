@@ -1,5 +1,6 @@
-#!/bin/sh
-source  ~/AceProfile/Installer/precondition.sh
+#!/usr/bin/bash
+INSTALLATION_PATH=~/AceProfile/Installer/
+source  $INSTALLATION_PATH/precondition.sh
 
 setup_git()
 {
@@ -47,6 +48,13 @@ setup_git
 setup_bash_profile
 setup_vimrc
 
+VAR='N'
+read -p "Could you want to furture install for git/vim extension?[y/N]" var
+[ "$var" == '' ] || VAR=$(echo $var | tr 'a-z' 'A-Z')
+if [ "$VAR" != 'N' ]; then
+   $INSTALLATION_PATH/install_vim_extension.sh
+   $INSTALLATION_PATH/install_git_extension.sh
+fi
 echo "********************************************************************************"
 echo "************* Installation complete, please relogin to enjoy it! ***************"
 echo "********************************************************************************"

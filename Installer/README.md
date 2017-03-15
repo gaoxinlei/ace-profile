@@ -1,7 +1,7 @@
 If you want to add a new installer script, please follow the rule as below:
 
 ```
-#!/bin/sh
+#!/usr/bin/bash
 source $(dirname $0)/precondition.sh
 
 # the function name is consistent with $RELEASE defined in precondition.sh

@@ -1,18 +1,18 @@
-#!/bin/sh
-
-source $(dirname $0)/precondition.sh
+#!/usr/bin/bash
+source $(cd `dirname $0`; pwd)/precondition.sh
 
 CENTOS()
 {
+    $YUM epel-release
     $YUM update
     $YUMG "Development tools"
-    $YUM ctags python-devel
+    $YUM vim ctags python-devel
 }
 
 UBUNTU()
 {
     $APTGET update
-    $APTGET build-essential exuberant-ctags python-dev
+    $APTGET vim build-essential exuberant-ctags python-dev
 }
 
 $RELEASE

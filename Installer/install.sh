@@ -1,4 +1,22 @@
-#!/bin/sh
+#!/usr/bin/bash
+
+SUPPORT=(CENTOS UBUNTU)
+RELEASE_FILE=~/.release_info
+rm -f $RELEASE_FILE
+for release in $SUPPORT
+do
+    if cat /etc/*release | grep -i $release
+    then
+        echo $release > ~/.release_info
+        break
+    fi
+done
+
+if [ ! -e $RELEASE_FILE ];then
+    echo "[Error] Unknow OS!!!"
+    exit -1
+fi
+
 if ! which git > /dev/null 2>&1; then
     if which yum > /dev/null 2>&1; then
         sudo yum install -y git

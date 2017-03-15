@@ -1,8 +1,10 @@
-#!/bin/sh
-source $(dirname $0)/precondition.sh
+#!/usr/bin/bash
+source $(cd `dirname $0`; pwd)/precondition.sh
 
 CENTOS()
 {
+    $YUM epel-release 
+    $YUM update
     echo
     echo ">>>>>  Setup git flow..."
     $YUM gitflow
