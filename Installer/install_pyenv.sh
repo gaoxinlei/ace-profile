@@ -1,4 +1,6 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -n
+
+# Now just support CentOS
 sudo pip install virtualenv virtualenvwrapper
 
 # To tell pip to only run if there is a virtualenv currently activated
