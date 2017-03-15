@@ -1,5 +1,6 @@
 #!/usr/bin/bash
-source $(cd `dirname $0`; pwd)/precondition.sh
+current_dir=$(cd `dirname ${BASH_SOURCE[0]}`; pwd)
+source $current_dir/precondition.sh
 
 CENTOS()
 {
@@ -16,7 +17,7 @@ UBUNTU()
 }
 
 $RELEASE
-source $(dirname $0)/verify_pip.sh
+source $current_dir/verify_pip.sh
 $PIP jedi
 
 [ -e $vimrc -o -h $vimrc  ] && mv $vimrc ${vimrc}.backup

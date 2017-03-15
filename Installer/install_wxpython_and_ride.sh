@@ -1,6 +1,6 @@
 #!/usr/bin/bash
-source $(cd `dirname $0`; pwd)/precondition.sh
-source $(cd `dirname $0`; pwd)/verify_pip.sh
+source $(cd `dirname ${BASH_SOURCE[0]}`; pwd)/precondition.sh
+source $(cd `dirname ${BASH_SOURCE[0]}`; pwd)/verify_pip.sh
 CENTOS()
 {
     $PIP robotframework

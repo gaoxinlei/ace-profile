@@ -2,7 +2,7 @@
 
 RELEASE=$(cat ~/.release_info | tr 'a-z' 'A-Z')
 
-CWD=$(cd `dirname $0`; pwd)
+CWD=$(cd `dirname ${BASH_SOURCE[0]}`; pwd)
 DOWNLOADER='curl -Lo '
 
 # defined known package manager tools 
