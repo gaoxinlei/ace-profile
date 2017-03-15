@@ -18,4 +18,8 @@ UBUNTU()
 $RELEASE
 source $(dirname $0)/verify_pip.sh
 $PIP jedi
+
+[ -e $vimrc -o -h $vimrc  ] && mv $vimrc ${vimrc}.backup
+ln -s $Vimrcs/_vimrc $vimrc
+sed -i '/vi=/s/^#//' $BashProfile/_alias
 (vim +PlugClean! +PlugInstall! +qa)

@@ -39,7 +39,7 @@ setup_vimrc()
     echo ">>>>>  Setup vim resource..."
     [ -e $vimrc -o -h $vimrc ] && mv $vimrc ${vimrc}.backup
     [ -e $ideavimrc -o -h $ideavimrc ] && mv $ideavimrc ${ideavimrc}.backup
-    ln -s $Vimrcs/_vimrc $vimrc
+    ln -s $Vimrcs/_vimrc_without_pulgin $vimrc
     ln -s $Vimrcs/_ideavimrc $ideavimrc
 }
 
