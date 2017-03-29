@@ -24,3 +24,5 @@ $PIP jedi
 ln -s $Vimrcs/_vimrc $vimrc
 sed -i '/vi=/s/^#//' $BashProfile/_alias
 (vim +PlugClean! +PlugInstall! +qa)
+
+source $current_dir/rear_echo.sh

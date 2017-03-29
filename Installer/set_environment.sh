@@ -55,6 +55,5 @@ if [ "$VAR" != 'N' ]; then
    $INSTALLATION_PATH/install_vim_extension.sh
    $INSTALLATION_PATH/install_git_extension.sh
 fi
-echo "********************************************************************************"
-echo "************* Installation complete, please relogin to enjoy it! ***************"
-echo "********************************************************************************"
+
+source $INSTALLATION_PATH/rear_echo.sh
