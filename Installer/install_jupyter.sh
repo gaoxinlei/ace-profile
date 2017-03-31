@@ -1,4 +1,4 @@
-#sudo pip install jupyter
+sudo pip install jupyter
 jupyter notebook --generate-config
 jupyter_default_conf=~/.jupyter/jupyter_notebook_config.py
 jupyter_default_pwd=~/.jupyter/jupyter_notebook_config.json
