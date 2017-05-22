@@ -28,5 +28,5 @@ if ! which git > /dev/null 2>&1; then
     fi
 fi
 cd ~
-git clone https://github.com/acefei/AceProfile.git
-./AceProfile/Installer/set_environment.sh
+git clone https://github.com/acefei/ace-profile.git
+./ace-profile/Installer/set_environment.sh
