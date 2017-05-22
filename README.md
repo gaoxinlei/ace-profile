@@ -1,6 +1,6 @@
 ## Installation:
     Just One Step: 
-       curl -sL https://raw.githubusercontent.com/acefei/AceProfile/master/Installer/install.sh | sh
+       curl -sL https://raw.githubusercontent.com/acefei/ace-profile/master/Installer/install.sh | sh
     
 ## Reference
 > [.bashrc and .bash_profile](http://tldp.org/LDP/abs/html/sample-bashrc.html)<br>
