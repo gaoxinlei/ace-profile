@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-INSTALLATION_PATH=~/AceProfile/Installer/
+INSTALLATION_PATH=~/ace-profile/Installer/
 source  $INSTALLATION_PATH/precondition.sh
 
 setup_git()
