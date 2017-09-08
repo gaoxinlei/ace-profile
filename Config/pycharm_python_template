@@ -7,7 +7,7 @@
 """
 
 
-class ${NAME}():
+class ${NAME}(object):
     def __init__(self):
         pass
 
