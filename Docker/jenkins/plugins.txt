@@ -1,0 +1,10 @@
+git:latest
+git-client:latest
+git-server:latest
+github:latest
+github-api:latest
+github-branch-source:latest
+docker-commons:latest
+docker-workflow:latest
+docker-build-publish:latest
+dockerhub-notification:latest

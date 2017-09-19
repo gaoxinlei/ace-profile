@@ -1,0 +1,14 @@
+version: '3'
+services:
+ jenkins:
+  container_name: jenkins
+  build: .
+  ports:
+      - "8080:8080"
+        # for jnlp-slave
+      - "50000:50000"
+  volumes:
+    - /opt/jenkins/:/var/jenkins_home
+      # for docker in docker, please ensure docker location on host 
+    - /usr/bin/docker:/usr/bin/docker
+    - /var/run/docker.sock:/var/run/docker.sock
