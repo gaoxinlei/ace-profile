@@ -1,3 +1,4 @@
+ws-cleanup:latest
 jobConfigHistory:latest
 git:latest
 git-client:latest
