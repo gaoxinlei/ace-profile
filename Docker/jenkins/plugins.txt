@@ -10,3 +10,7 @@ docker-commons:latest
 docker-workflow:latest
 docker-build-publish:latest
 dockerhub-notification:latest
+violations:latest
+run-condition:latest
+ws-cleanup:latest
+xvfb:latest
