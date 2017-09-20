@@ -1,3 +1,4 @@
+jobConfigHistory:latest
 git:latest
 git-client:latest
 git-server:latest
