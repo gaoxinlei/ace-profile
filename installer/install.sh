@@ -3,9 +3,30 @@
 SUPPORT=(CENTOS UBUNTU)
 RELEASE_FILE=~/.release_info
 rm -f $RELEASE_FILE
+
+for release in ${SUPPORT[@]}
+do
+    echo $release
+done
+exit
+tmp=$(mktemp)
+cd $tmp
+cat /etc/*release > release_info
+if grep -i "CENTOS" release_info > /dev/null; then
+    yum install -y git
+    echo "CENTOS" > $RELEASE_FILE
+elif grep -i "UBUNTU" release_info > /dev/null; then
+    echo "UBUNTU" > $RELEASE_FILE
+fi
+
+
+
+
+
+
 for release in $SUPPORT
 do
-    if cat /etc/*release | grep -i $release
+    if cat /etc/*release | grep -i $release > /dev/null 2>&1
     then
         echo $release > ~/.release_info
         break
@@ -13,7 +34,7 @@ do
 done
 
 if [ ! -e $RELEASE_FILE ];then
-    echo "[Error] Unknow OS!!!"
+    echo "[Error] Sorry! Now Only support ${SUPPORT[*]}!"
     exit -1
 fi
 
