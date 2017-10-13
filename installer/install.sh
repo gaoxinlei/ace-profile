@@ -31,5 +31,5 @@ if ! which git > /dev/null 2>&1; then
     exit -1
 fi
 
-git clone -b dev https://github.com/acefei/ace-profile.git $INSTALL_PATH
+git clone https://github.com/acefei/ace-profile.git $INSTALL_PATH
 $INSTALL_PATH/installer/common.sh
