@@ -20,3 +20,4 @@ bashrc=$HOME/.bashrc
 profile=$HOME/.bash_profile
 vimrc=$HOME/.vimrc
 ideavimrc=$HOME/.ideavimrc
+

@@ -32,4 +32,4 @@ if ! which git > /dev/null 2>&1; then
 fi
 
 git clone -b dev https://github.com/acefei/ace-profile.git $INSTALL_PATH
-echo $INSTALL_PATH/installer/
+$INSTALL_PATH/installer/common.sh
