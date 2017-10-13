@@ -5,7 +5,7 @@ release_info=~/.release_info
 RELEASE=$(cat $release_info | tr 'a-z' 'A-Z')
 
 CWD=$(cd `dirname ${BASH_SOURCE[0]}`; pwd)
-DOWNLOADER='curl -sLO '
+DOWNLOADER='curl -sL -o '
 
 # defined known package manager tools 
 YUM='sudo yum install -y '
