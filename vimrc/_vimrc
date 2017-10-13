@@ -19,16 +19,14 @@
     call plug#begin('~/.vim/plugged')
         " Python mode (indentation, doc, refactor, lints, code checking, motion and
         " operators, highlighting, run and ipdb breakpoints)
-        "Plug 'klen/python-mode'
+        Plug 'klen/python-mode'
          
         " Autocompletion library
-        " Note:
-        " 1. the python-mode VIM plugin seems to conflict with jedi-vim, 
-        "    therefore you should disable it before enabling jedi-vim.
-        " 2. Due to jedi need to search the python library, 
-        "    so it maybe popup nothing when you import some module for first time.
-        Plug 'davidhalter/jedi-vim'
+        Plug 'maralla/completor.vim'
          
+        " Lint check
+        Plug 'w0rp/ale'
+
         " Code and files fuzzy finder
         Plug 'ctrlpvim/ctrlp.vim'
 
@@ -42,9 +40,9 @@
         Plug 'majutsushi/tagbar'
 
         "  Code snippet
-        Plug 'SirVer/ultisnips'
+        "Plug 'SirVer/ultisnips'
         " Snippets are separated from the engine. Add this if you want them:
-        Plug 'honza/vim-snippets'
+        "Plug 'honza/vim-snippets'
         
         " Insert or delete brackets, parens, quotes in pair.
         Plug 'jiangmiao/auto-pairs'
@@ -119,6 +117,17 @@
 " }
 
 " Plugin Settings {
+    " Ale {
+        let g:ale_fixers = {
+	 \ 'python' : ['flake8'],
+	 \} 
+    " }
+
+    " Completor {
+      " pip install jedi first
+      let g:completor_python_binary = '/usr/lib/python2.7/site-packages/jedi'
+    " }
+
     " Nerdcommenter {
         map <C-c> <plug>NERDCommenterToggle  
     " }
