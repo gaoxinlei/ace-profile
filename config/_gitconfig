@@ -5,3 +5,7 @@
 [user]
 	name  = acefei
 	email = acefeilxy@gmail.com
+[push]
+    default = simple
+[alias]
+    pr = pull --rebase
