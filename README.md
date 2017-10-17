@@ -1,6 +1,9 @@
 ## Installation:
-    Just One Step: 
-       curl -sL https://raw.githubusercontent.com/acefei/ace-profile/master/installer/install.sh | sh
+```
+curl -sL https://raw.githubusercontent.com/acefei/ace-profile/master/installer/install.sh | sh
+```
+> You need to modify $HOME/.gitconfig for github user info 
+
 
 ## Feature
 1. git command completion

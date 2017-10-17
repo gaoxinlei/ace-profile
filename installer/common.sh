@@ -17,9 +17,9 @@ setup_git()
     echo ">>>>>  Setup git-flow..."
     $DOWNLOADER $HOME/.git-flow-completion.bash https://raw.githubusercontent.com/bobthecow/git-flow-completion/master/git-flow-completion.bash
     popd
-
-    git config --global merge.tool meld
-    git config --global diff.tool meld
+    
+    echo "copy $config/_gitconfig $gitconfig"
+    cp $config/_gitconfig $gitconfig
 }
 
 setup_bash_profile()
@@ -41,7 +41,7 @@ setup_pip()
 {
     echo
     echo ">>>>>  Setup pip..."
-    curl -sL https://bootstrap.pypa.io/get-pip.py | sudo python    
+    curl -L https://bootstrap.pypa.io/get-pip.py | sudo python    
 }
 
 setup_fzf()

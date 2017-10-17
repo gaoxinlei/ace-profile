@@ -15,9 +15,10 @@ PIP='sudo pip install'
 
 bash_profile=$CWD/../bash_profile
 vimrcs=$CWD/../vimrcs
+config=$CWD/../config
 
 bashrc=$HOME/.bashrc
 profile=$HOME/.bash_profile
 vimrc=$HOME/.vimrc
 ideavimrc=$HOME/.ideavimrc
-
+gitconfig=$HOME/.gitconfig
