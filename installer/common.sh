@@ -49,7 +49,7 @@ setup_fzf()
     echo
     echo ">>>>>  Setup fzf..."
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
+    yes | ~/.fzf/install
 }
 
 setup_vimrc()
