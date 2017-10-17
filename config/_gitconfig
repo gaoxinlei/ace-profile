@@ -8,4 +8,4 @@
 [push]
     default = simple
 [alias]
-    pr = pull --rebase
+    up = !sh -c 'git pull --rebase && git push'
