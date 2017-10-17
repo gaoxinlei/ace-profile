@@ -31,10 +31,11 @@ INSTALL_VIM()
 
     make && sudo make install
     cd .. && rm -rf vim*/
+    echo "alias vi=vim" >> $profile
 }
 
 $RELEASE
-#INSTALL_VIM
+INSTALL_VIM
 
 [ -e $vimrc -o -h $vimrc  ] && mv $vimrc ${vimrc}.backup
 ln -s $vimrcs/_vimrc $vimrc
