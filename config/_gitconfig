@@ -1,0 +1,7 @@
+[merge]
+	tool = meld
+[diff]
+	tool = meld
+[user]
+	name  = acefei
+	email = acefeilxy@gmail.com
