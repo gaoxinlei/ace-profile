@@ -22,7 +22,7 @@
         Plug 'klen/python-mode'
          
         " Autocompletion library
-        Plug 'maralla/completor.vim'
+        "Plug 'maralla/completor.vim'
          
         " Lint check
         Plug 'w0rp/ale'
