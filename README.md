@@ -6,7 +6,7 @@ curl -sL https://raw.githubusercontent.com/acefei/ace-profile/master/installer/i
 
 
 ## Feature
-1. git command completion
+1. git command completion and git prompt show
 2. [fzf is a general-purpose command-line fuzzy finder](https://github.com/junegunn/fzf)      
 ```
     CTRL-T - Paste the selected files and directories onto the command line
