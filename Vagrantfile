@@ -19,4 +19,6 @@ Vagrant.configure("2") do |config|
     vb.memory = "2048"
     vb.cpus = 1
   end
+
+  config.vm.provision "shell", path: "installer/centos_provision.sh"
 end
