@@ -20,5 +20,12 @@ Vagrant.configure("2") do |config|
     vb.cpus = 1
   end
 
-  config.vm.provision "shell", path: "installer/centos_provision.sh"
+  # 解决虚拟机内网速比主机慢的问
+  # https://github.com/hashicorp/vagrant/issues/1807#issuecomment-19132198
+  config.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+  end
+
+  #config.vm.provision "shell", path: "installer/centos_provision.sh"
 end
