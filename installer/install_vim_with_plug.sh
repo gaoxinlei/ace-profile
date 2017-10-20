@@ -24,7 +24,7 @@ INSTALL_VIM()
     curl -O ftp://ftp.vim.org/pub/vim/unix/vim-8.0.tar.bz2
     tar xf vim-*.tar.bz2
     cd vim*/
-    ./configure --prefix=/usr --with-features=huge \
+    ./configure --prefix=/usr/local --with-features=huge \
         --enable-rubyinterp  \
         --enable-pythoninterp \
         --enable-luainterp
