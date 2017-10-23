@@ -76,6 +76,7 @@
         set ignorecase                  " Case insensitive search
         set smartcase                   " Case sensitive when uc present
         set wildmenu                    " Show list instead of just completing
+        set foldlevelstart=99
 
         " With a map leader it's possible to do extra key combinations
         let mapleader = ","
