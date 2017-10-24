@@ -17,4 +17,8 @@ UBUNTU()
 }
 
 $RELEASE
+sudo cat > /etc/pip.conf <<EOF
+[global]
+index-url = https://pypi.doubanio.com/simple
+EOF
 $PIP --upgrade pip 
