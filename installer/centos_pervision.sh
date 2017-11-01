@@ -1,21 +1,28 @@
 #!/bin/bash
 
 update_resolv_conf() {
-cat > resolv.conf <<EOF
+cat > /etc/resolv.conf <<EOF
 nameserver 114.114.114.114
 nameserver 119.29.29.29
 EOF
-sudo mv resolv.conf /etc
 }
 
 install_chinese_support() {
-    sudo yum install -y wqy-microhei-fonts
+    yum install -y wqy-microhei-fonts
+}
+
+download_163_yum_repo() {
+    pushd /etc/yum.repos.d/ 
+    [ -e CentOS-Base.repo ] && mv CentOS-Base.repo CentOS-Base.repo.backup
+    curl -o CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo
+    yum clean all
+    yum makecache
+    popd
 }
 
 main() {
-    sudo yum install -y epel-release
-    sudo yum update -y 
     update_resolv_conf 
+    download_163_yum_repo
     install_chinese_support
 }
 
