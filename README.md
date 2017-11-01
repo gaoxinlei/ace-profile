@@ -6,8 +6,8 @@ curl -sL https://raw.githubusercontent.com/acefei/ace-profile/master/installer/i
 
 
 ## Feature
-1. git command completion and git prompt show
-2. [fzf is a general-purpose command-line fuzzy finder](https://github.com/junegunn/fzf)      
+- git command completion and git prompt show
+- [fzf is a general-purpose command-line fuzzy finder](https://github.com/junegunn/fzf)      
 ```
     CTRL-T - Paste the selected files and directories onto the command line
         Set FZF_CTRL_T_COMMAND to override the default command
@@ -20,9 +20,8 @@ curl -sL https://raw.githubusercontent.com/acefei/ace-profile/master/installer/i
         Set FZF_ALT_C_COMMAND to override the default command
         Set FZF_ALT_C_OPTS to pass additional options
 ```
-3. Vagrantfile for centos7      
-4. Dockerfile     
-   > jenkins       
+- Vagrantfile for centos7      
+- [Tig: text-mode interface for Git](https://github.com/jonas/tig)
 
 ## Vim with plug
 please custom [_vimrc](https://github.com/acefei/ace-profile/master/vimrcs/_vimrc) as you wish

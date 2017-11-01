@@ -52,6 +52,19 @@ setup_fzf()
     yes | ~/.fzf/install
 }
 
+setup_tig()
+{
+    echo
+    echo ">>>>>  Setup tig..."
+    git clone git://github.com/jonas/tig.git
+    pushd tig/
+    make configure
+    ./configure --prefix=/usr/local
+    make && sudo make install
+    popd
+    rm -rf tig/
+}
+
 setup_vimrc()
 {
     echo
@@ -62,12 +75,18 @@ setup_vimrc()
     ln -s $vimrcs/_ideavimrc $ideavimrc
 }
 
+main()
+{
+#    setup_git
+#    setup_bash_profile
+#    setup_vimrc
+#    setup_pip
+#    setup_fzf
+    setup_tig
+}
+
 ##################### MAIN ##########################
-setup_git
-setup_bash_profile
-setup_vimrc
-setup_pip
-setup_fzf
+main
 
 VAR='N'
 read -p "Could you want to furture install for git/vim extension?[y/N]" var
