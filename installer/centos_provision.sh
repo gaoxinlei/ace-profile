@@ -9,7 +9,7 @@ EOF
 
 install_requirement() {
     # dev tools
-    yum groupinstall "Development Tools"
+    yum groupinstall -y "Development Tools"
     
     # chinese fonts
     yum install -y wqy-microhei-fonts
