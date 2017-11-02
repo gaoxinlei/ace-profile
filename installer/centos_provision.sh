@@ -27,7 +27,7 @@ download_163_yum_repo() {
 main() {
     update_resolv_conf 
     download_163_yum_repo
-    install_chinese_support
+    install_requirement
 }
 
 main
