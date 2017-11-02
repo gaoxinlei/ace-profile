@@ -56,6 +56,7 @@ setup_tig()
 {
     echo
     echo ">>>>>  Setup tig..."
+    sudo yum install -y ncurses-devel
     git clone git://github.com/jonas/tig.git
     pushd tig/
     make configure
