@@ -7,7 +7,11 @@ nameserver 119.29.29.29
 EOF
 }
 
-install_chinese_support() {
+install_requirement() {
+    # dev tools
+    yum groupinstall "Development Tools"
+    
+    # chinese fonts
     yum install -y wqy-microhei-fonts
 }
 
