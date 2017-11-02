@@ -10,7 +10,7 @@ EOF
 
 source $ACE_PROFILE_ENV
 rm -f $RELEASE_FILE
-rm -f $INSTALL_PATH
+rm -rf $INSTALL_PATH
 
 for release in ${SUPPORT[@]}
 do
