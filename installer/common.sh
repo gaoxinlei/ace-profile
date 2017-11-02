@@ -77,11 +77,11 @@ setup_vimrc()
 
 main()
 {
-#    setup_git
-#    setup_bash_profile
-#    setup_vimrc
-#    setup_pip
-#    setup_fzf
+    setup_git
+    setup_bash_profile
+    setup_vimrc
+    setup_pip
+    setup_fzf
     setup_tig
 }
 
