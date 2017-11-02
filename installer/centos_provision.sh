@@ -11,7 +11,7 @@ install_requirement() {
     # dev tools
     yum groupinstall -y "Development Tools"
     
-    yum install -y git
+    yum install -y git vim
     
     # chinese fonts
     yum install -y wqy-microhei-fonts
