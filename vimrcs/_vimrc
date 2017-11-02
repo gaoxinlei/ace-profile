@@ -19,7 +19,7 @@
     call plug#begin('~/.vim/plugged')
         " Python mode (indentation, doc, refactor, lints, code checking, motion and
         " operators, highlighting, run and ipdb breakpoints)
-        Plug 'klen/python-mode'
+        Plug 'python-mode/python-mode'
          
         " Autocompletion library
         "Plug 'maralla/completor.vim'
