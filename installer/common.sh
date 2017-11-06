@@ -42,6 +42,11 @@ setup_pip()
     echo
     echo ">>>>>  Setup pip..."
     curl -L https://bootstrap.pypa.io/get-pip.py | sudo python    
+    sudo cat > /etc/pip.conf <<EOF
+[global]
+index-url = https://pypi.doubanio.com/simple
+EOF
+    pip install -U pip
 }
 
 setup_fzf()

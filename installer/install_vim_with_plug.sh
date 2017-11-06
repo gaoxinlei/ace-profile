@@ -16,7 +16,6 @@ UBUNTU()
 
 INSTALL_VIM()
 {
-    source $current_dir/verify_pip.sh
     $PIP jedi
 
     cd /tmp
