@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-@author: Acefei
-@file: ${NAME}.py
-@time: ${DATE} ${TIME}
+@author: Acefei
+@file: ${NAME}.py
+@time: ${YEAR}-${MONTH}-${DAY} ${TIME}
 """
 
 
