@@ -1,11 +1,18 @@
 [merge]
-	tool = meld
+    tool = meld
+
 [diff]
-	tool = meld
+    tool = meld
+
 [user]
-	name  = acefei
-	email = acefeilxy@gmail.com
+    name  = acefei
+    email = acefeilxy@gmail.com
+
+[credential]
+    helper = store
+
 [push]
     default = simple
+
 [alias]
     up = !sh -c 'git pull --rebase && git push'
